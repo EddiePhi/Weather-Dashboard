@@ -18,17 +18,17 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./Develop/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Weather Dashboard</title>
   </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <div id="citySearch" class="col-xl-3"> 
-                <div>Search for a City:</div>
-                <input>
-                <button>Search</button>
-                <ul id="searchedCities">
+                <h4>Search for a City:</h4>
+                <input type="text" id="cityInput">
+                <input id="submitBtn" type="submit" value="Submit">
+                <ul id="searchHistory">
                     <li>Test</li>
                     <li>Test</li>
                     <li>Test</li>
@@ -39,17 +39,21 @@
                     <div class="card col-xl-12">
                         <div class="card-body">
                           <h1 id="currentCity">currentCity</h1>
-                          <div id="temp">Temp</div>
-                          <div id="humidity">Humidity</div>
-                          <div id="windSpeed">WindSpeed</div>
-                          <div id="uvIndex">UV Index</div>
-                          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                          <div id="temp">Temp: </div>
+                          <div id="humidity">Humidity:</div>
+                          <div id="windSpeed">Wind Speed: </div>
+                          <div id="uvIndex">UV Index: </div>
                         </div>
                     </div>
                 </div>
                 <br>
                 <div class="row">
                     <h1 id="forecast" class="col-xl-12">5-Day forecast</h1>
+                    <div id="day1" class="col-xl day">Day 1</div>
+                    <div id="day2" class="col-xl day">Day 2</div>
+                    <div id="day3" class="col-xl day">Day 3</div>
+                    <div id="day4" class="col-xl day">Day 4</div>
+                    <div id="day5" class="col-xl day">Day 5</div>
                 </div>
             </div>
         </div>
