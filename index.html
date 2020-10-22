@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./Develop/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="citySearch" class="col-xl-3"> 
+                <div>Search for a City:</div>
+                <input>
+                <button>Search</button>
+                <ul id="searchedCities">
+                    <li>Test</li>
+                    <li>Test</li>
+                    <li>Test</li>
+                </ul>
+            </div>
+            <div id="displayInfo" class="col-xl-9">
+                <div class="row">
+                    <div class="card col-xl-12">
+                        <div class="card-body">
+                          <h1 id="currentCity">currentCity</h1>
+                          <div id="temp">Temp</div>
+                          <div id="humidity">Humidity</div>
+                          <div id="windSpeed">WindSpeed</div>
+                          <div id="uvIndex">UV Index</div>
+                          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h1 id="forecast" class="col-xl-12">5-Day forecast</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" defer src="https://MomentJS.com/downloads/moment.js"></script>
+    <script type="text/javascript" defer src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script defer src="./script.js"></script>
+</body>
+</html>
