@@ -9,12 +9,15 @@
 // 5 day/3 hour forecast: https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b
 // UV Index: http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b
 
+
+
 $("#submitBtn").on("click", function(event) {
     event.preventDefault();
     //Drawing user input from search field needs work
-    var cityInput = $('input').attr("cityInput"); // check movie.json.dump.html
-    var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + "Atlanta" + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
-        
+    var cityInput = $('#cityInput').val(); // check movie.json.dump.html
+    var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
+    
+    
     // Creates AJAX call for the specific movie button being clicked
         $.ajax({
           url: currentWeatherURL,
@@ -52,7 +55,7 @@ $("#submitBtn").on("click", function(event) {
                 uvIndex.text("UV Index: " + cityUVIndex);
             });
 
-            var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + "Atlanta" + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
+            var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
             $.ajax({
                 url: forecastURL,
                 method: "GET"
