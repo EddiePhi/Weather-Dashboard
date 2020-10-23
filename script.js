@@ -14,9 +14,19 @@
 $("#submitBtn").on("click", function(event) {
     event.preventDefault();
     //Drawing user input from search field needs work
-    var cityInput = $('#cityInput').val(); // check movie.json.dump.html
-    var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
-    
+    let cityInput = $('#cityInput').val(); // check movie.json.dump.html
+    let currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
+    let searchHistory = [];
+    searchHistory.push(cityInput);
+    $('#cityInput').val('');
+
+    // Populate search history
+    for (let i = 0; i < searchHistory.length; i++){
+        let searchSection = $('#searchHistory');
+        let newDiv = $('<div>');
+        newDiv.text(searchHistory[i]);
+        searchSection.prepend(newDiv);
+    };
     
     // Creates AJAX call for the specific movie button being clicked
         $.ajax({
@@ -27,6 +37,7 @@ $("#submitBtn").on("click", function(event) {
             let currentCity = $('#currentCity');
             let cityName = response.name;
             currentCity.text(cityName);
+            
 
             let currentDate = $('#currentDate')
             let momentDate = moment().format('L');
@@ -51,8 +62,20 @@ $("#submitBtn").on("click", function(event) {
                 method: "GET"
             }).then(function(response) {
                 let uvIndex = $('#uvIndex');
-                let cityUVIndex= response.value;
+                let cityUVIndex = response.value;
                 uvIndex.text("UV Index: " + cityUVIndex);
+
+                if (cityUVIndex >= 0 && cityUVIndex < 3){
+                    uvIndex.css('backgroundColor', 'green');
+                } else if (cityUVIndex >= 3 && cityUVIndex < 6){
+                    uvIndex.css('backgroundColor', 'yellow');
+                } else if (cityUVIndex >= 6 && cityUVIndex < 8){
+                    uvIndex.css('backgroundColor', 'orange');
+                } else if (cityUVIndex >= 8 && cityUVIndex < 11){
+                    uvIndex.css('backgroundColor', 'red');
+                } else {
+                    uvIndex.css('backgroundColor', 'purple');
+                };
             });
 
             var forecastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityInput + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
