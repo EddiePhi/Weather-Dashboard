@@ -1,6 +1,7 @@
 //Questions for tutor:
     // How to adjust date format for forecast squares?
     //local sotrage to hold last searched city?
+    //how to make my code DRY?
 
 
 // https://openweathermap.org/api
@@ -159,6 +160,8 @@ $("#submitBtn").on("click", function(event) {
                 humidity3.text("Humidity: " + humidityC);
                 humidity4.text("Humidity: " + humidityD);
                 humidity5.text("Humidity: " + humidityE);
+
+                $('.day').each()
             });
 
         });
