@@ -10,7 +10,7 @@ The app gets JSON elements from https://openweathermap.org/api.
 
 Screenshot:
 
-![Weather Dashboard](./Assets/weather-dashboard.png)
+![Weather Dashboard](./Assets/weather-dashboard-capture.png)
 
 Technologies: HTML5, CSS3, Bootstrap, JavaScript, jQuery, Third-Party API
 
