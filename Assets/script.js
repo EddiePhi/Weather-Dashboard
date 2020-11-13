@@ -42,7 +42,7 @@ function previousSearch() {
         let momentDate = moment().format('L');
         currentCity.append(" (" + momentDate + ")")
         let currentIcon = response.weather[0].icon;
-        currentCity.append(`<img src="http://openweathermap.org/img/wn/${currentIcon}@2x.png">`)
+        currentCity.append(`<img src="https://openweathermap.org/img/wn/${currentIcon}@2x.png">`)
 
         let temp = $('#temp');
         let cityTemp = response.main.temp;
@@ -123,11 +123,11 @@ function previousSearch() {
             $(icon4).empty();
             $(icon5).empty();
             
-            icon1.append(`<img src="http://openweathermap.org/img/wn/${iconA}@2x.png">`);
-            icon2.append(`<img src="http://openweathermap.org/img/wn/${iconB}@2x.png">`);
-            icon3.append(`<img src="http://openweathermap.org/img/wn/${iconC}@2x.png">`);
-            icon4.append(`<img src="http://openweathermap.org/img/wn/${iconD}@2x.png">`);
-            icon5.append(`<img src="http://openweathermap.org/img/wn/${iconE}@2x.png">`);
+            icon1.append(`<img src="https://openweathermap.org/img/wn/${iconA}@2x.png">`);
+            icon2.append(`<img src="https://openweathermap.org/img/wn/${iconB}@2x.png">`);
+            icon3.append(`<img src="https://openweathermap.org/img/wn/${iconC}@2x.png">`);
+            icon4.append(`<img src="https://openweathermap.org/img/wn/${iconD}@2x.png">`);
+            icon5.append(`<img src="https://openweathermap.org/img/wn/${iconE}@2x.png">`);
             
             //Set forecast temp
             let temp1 = $('#temp1');
@@ -213,7 +213,7 @@ function searchCity(event) {
         let momentDate = moment().format('L');
         currentCity.append(" (" + momentDate + ")")
         let currentIcon = response.weather[0].icon;
-        currentCity.append(`<img src="http://openweathermap.org/img/wn/${currentIcon}@2x.png">`)
+        currentCity.append(`<img src="https://openweathermap.org/img/wn/${currentIcon}@2x.png">`)
 
         let temp = $('#temp');
         let cityTemp = response.main.temp;
@@ -294,11 +294,11 @@ function searchCity(event) {
             $(icon4).empty();
             $(icon5).empty();
             
-            icon1.append(`<img src="http://openweathermap.org/img/wn/${iconA}@2x.png">`);
-            icon2.append(`<img src="http://openweathermap.org/img/wn/${iconB}@2x.png">`);
-            icon3.append(`<img src="http://openweathermap.org/img/wn/${iconC}@2x.png">`);
-            icon4.append(`<img src="http://openweathermap.org/img/wn/${iconD}@2x.png">`);
-            icon5.append(`<img src="http://openweathermap.org/img/wn/${iconE}@2x.png">`);
+            icon1.append(`<img src="https://openweathermap.org/img/wn/${iconA}@2x.png">`);
+            icon2.append(`<img src="https://openweathermap.org/img/wn/${iconB}@2x.png">`);
+            icon3.append(`<img src="https://openweathermap.org/img/wn/${iconC}@2x.png">`);
+            icon4.append(`<img src="https://openweathermap.org/img/wn/${iconD}@2x.png">`);
+            icon5.append(`<img src="https://openweathermap.org/img/wn/${iconE}@2x.png">`);
             
             //Set forecast temp
             let temp1 = $('#temp1');
@@ -364,7 +364,7 @@ function searchCity(event) {
             let momentDate = moment().format('L');
             currentCity.append(" (" + momentDate + ")")
             let currentIcon = response.weather[0].icon;
-            currentCity.append(`<img src="http://openweathermap.org/img/wn/${currentIcon}@2x.png">`)
+            currentCity.append(`<img src="https://openweathermap.org/img/wn/${currentIcon}@2x.png">`)
 
             let temp = $('#temp');
             let cityTemp = response.main.temp;
@@ -379,7 +379,7 @@ function searchCity(event) {
             windSpeed.text("Wind Speed: " + cityWindSpeed);
 
 
-            var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
+            var uvURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
             $.ajax({
                 url: uvURL,
                 method: "GET"
@@ -445,11 +445,11 @@ function searchCity(event) {
                 $(icon4).empty();
                 $(icon5).empty();
                 
-                icon1.append(`<img src="http://openweathermap.org/img/wn/${iconA}@2x.png">`);
-                icon2.append(`<img src="http://openweathermap.org/img/wn/${iconB}@2x.png">`);
-                icon3.append(`<img src="http://openweathermap.org/img/wn/${iconC}@2x.png">`);
-                icon4.append(`<img src="http://openweathermap.org/img/wn/${iconD}@2x.png">`);
-                icon5.append(`<img src="http://openweathermap.org/img/wn/${iconE}@2x.png">`);
+                icon1.append(`<img src="https://openweathermap.org/img/wn/${iconA}@2x.png">`);
+                icon2.append(`<img src="https://openweathermap.org/img/wn/${iconB}@2x.png">`);
+                icon3.append(`<img src="https://openweathermap.org/img/wn/${iconC}@2x.png">`);
+                icon4.append(`<img src="https://openweathermap.org/img/wn/${iconD}@2x.png">`);
+                icon5.append(`<img src="https://openweathermap.org/img/wn/${iconE}@2x.png">`);
                 
                 //Set forecast temp
                 let temp1 = $('#temp1');
