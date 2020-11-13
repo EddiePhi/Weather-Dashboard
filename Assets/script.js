@@ -228,7 +228,7 @@ function searchCity(event) {
         windSpeed.text("Wind Speed: " + cityWindSpeed);
 
 
-        var uvURL = "http://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
+        var uvURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=0f848c85d2b3dd23041f7c21a9bd6d0b";
         $.ajax({
             url: uvURL,
             method: "GET"
